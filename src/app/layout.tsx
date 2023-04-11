@@ -1,5 +1,6 @@
 import localFont from "@next/font/local";
 import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
 import "./globals.css";
 
 const nunito = localFont({
@@ -32,7 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${nunito.variable}`}>
-      <Navbar />
+      <div className="container mx-auto">
+        <Navbar />
+        <Hero />
+      </div>
       <body>{children}</body>
     </html>
   );
